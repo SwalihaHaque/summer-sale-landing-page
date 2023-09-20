@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <!-- Banner section start -->
     <banner class="flex items-center bg-rose-100">
 
         <div class="w-1/2 text-center m-32 p-8">
@@ -28,8 +29,10 @@
         </div>
     </banner>
 
+    <!-- banner section end -->
+
     <!--card section start-->
-    <section class="flex bg-gray-100 justify-center">
+    <div class="flex gaph-4 bg-gray-100 justify-center pb-12">
         <div class="grid">
             <h2 class="text-2xl p-8 font-bold">Kitchenware</h2>
             <div class="flex w-4/5 px-8 gap-4">
@@ -47,10 +50,12 @@
                         </div>
                         <h2 class="card-title">K.Accessories</h2>
                         <p>39.00 TK</p>
-
+                        <button onclick="clickMe(this)"
+                            class="bg-blue-500 hover:bg-green-700 text-white font-bold rounded-xl p-2">Add To
+                            Cart</button>
                     </div>
                 </div>
-                <div class="card bg-base-100 shadow-xl w-64">
+                <div id="" class="card bg-base-100 shadow-xl w-64">
                     <figure class="px-10 pt-10">
                         <img src="images/prod2.png" alt="Shoes" class="rounded-xl" />
                     </figure>
@@ -62,8 +67,11 @@
                             <input type="radio" name="rating" class="mask mask-star-2 bg-state-100" />
                             <input type="radio" name="rating" class="mask mask-star-2 bg-state-100" />
                         </div>
-                        <h2 class="card-title">K. Accessories</h2>
+                        <h2 class="card-title">K.Accessories</h2>
                         <p>25.00 Tk</p>
+                        <button onclick="clickMe(this)"
+                            class="bg-blue-500 hover:bg-green-700 text-white font-bold rounded-xl p-2">Add To
+                            Cart</button>
                     </div>
                 </div>
                 <div class="card bg-base-100 shadow-xl w-64">
@@ -80,13 +88,16 @@
                         </div>
                         <h2 class="card-title">Home Cooker</h2>
                         <p>49.00 TK</p>
+                        <button onclick="clickMe(this)"
+                            class="bg-blue-500 hover:bg-green-700 text-white font-bold rounded-xl p-2">Add To
+                            Cart</button>
                     </div>
                 </div>
             </div>
 
-            <!--2nd-->
+            <!--sportsware-->
             <h2 class="text-2xl p-8 font-bold">Sportsware</h2>
-            <div class="flex w-3/4 px-8 gap-4">
+            <div class="flex w-4/5 px-8 gap-4">
 
                 <div class="card bg-base-100 shadow-xl w-64">
                     <figure class="px-10 pt-10">
@@ -102,7 +113,9 @@
                         </div>
                         <h2 class="card-title">Sports Back Cap</h2>
                         <p>49.00 Tk</p>
-
+                        <button onclick="clickMe(this)"
+                            class="bg-blue-500 hover:bg-green-700 text-white font-bold rounded-xl p-2">Add To
+                            Cart</button>
                     </div>
                 </div>
                 <div class="card bg-base-100 shadow-xl w-64">
@@ -119,6 +132,9 @@
                         </div>
                         <h2 class="card-title">Full Jersey Set</h2>
                         <p>69.00 Tk</p>
+                        <button onclick="clickMe(this)"
+                            class="bg-blue-500 hover:bg-green-700 text-white font-bold rounded-xl p-2">Add To
+                            Cart</button>
                     </div>
                 </div>
                 <div class="card bg-base-100 shadow-xl w-64">
@@ -135,13 +151,16 @@
                         </div>
                         <h2 class="card-title">Sports cates</h2>
                         <p>150.00 TK</p>
+                        <button onclick="clickMe(this)"
+                            class="bg-blue-500 hover:bg-green-700 text-white font-bold rounded-xl p-2">Add To
+                            Cart</button>
                     </div>
                 </div>
             </div>
 
-            <!--3rd-->
+            <!--furniture-->
             <h2 class="text-2xl p-8 font-bold">Furniture</h2>
-            <div class="flex w-3/4 px-8 gap-4">
+            <div class="flex w-4/5 px-8 gap-4">
                 <div class="card bg-base-100 shadow-xl w-64">
                     <figure class="px-10 pt-10">
                         <img src="images/prod7.png" alt="" class="rounded-xl" />
@@ -156,7 +175,9 @@
                         </div>
                         <h2 class="card-title">Single Relax Chair</h2>
                         <p>185.00 Tk</p>
-
+                        <button onclick="clickMe(this)"
+                            class="bg-blue-500 hover:bg-green-700 text-white font-bold rounded-xl p-2">Add To
+                            Cart</button>
                     </div>
                 </div>
                 <div class="card bg-base-100 shadow-xl w-64">
@@ -173,6 +194,9 @@
                         </div>
                         <h2 class="card-title">Children Play</h2>
                         <p>299.00 Tk</p>
+                        <button onclick="clickMe(this)"
+                            class="bg-blue-500 hover:bg-green-700 text-white font-bold rounded-xl p-2">Add To
+                            Cart</button>
                     </div>
                 </div>
                 <div class="card bg-base-100 shadow-xl w-64">
@@ -189,41 +213,50 @@
                         </div>
                         <h2 class="card-title">Flexible Sofa</h2>
                         <p>339.00 TK</p>
+                        <button onclick="clickMe(this)"
+                            class="bg-blue-500 hover:bg-green-700 text-white font-bold rounded-xl p-2">Add To
+                            Cart</button>
                     </div>
                 </div>
             </div>
         </div>
 
-
-        <div class="cart w-1/5 bg-neutral-50 mt-20 h-24 p-2">
-            <div>
-                <h4 class="font-bold">Have Coupon?</h4>
-                <div class="flex">
-                    <input type="text" placeholder="Coupon Code" class="input input-bordered max-w-fit" />
-                    <button class="bg-rose-600 text-white p-2 rounded-xl">Apply</button>
+        <div>
+            <div class="cart bg-neutral-50 mt-20 h-24 p-2">
+                <div>
+                    <h4 class="font-bold">Have Coupon?</h4>
+                    <div class="flex">
+                        <input type="text" placeholder="Coupon Code" class="input input-bordered max-w-fit" />
+                        <button class="bg-rose-600 text-white p-2 rounded-xl">Apply</button>
+                    </div>
                 </div>
+            </div>
+
+            <div class="cart bg-neutral-50 mt-4 p-4">
+                <div id="selected-item" class="py-4">
+                    <!-- <ul>
+                        <li>Home Cooker</li>
+                        <li>K.Accessories</li>
+                    </ul> -->
+                </div>
+
+                <hr>
+
+                <div class="my-2">
+                    <p class="font-bold">Total Price: <span id="total">257.00</span>TK</p>
+                    <p class="font-bold">Discount: <span>51.40</span>TK</p>
+                    <p class="font-bold">Total: <span>205.60</span> Tk</p>
+                </div>
+
+                <hr>
+                <button class="bg-rose-600 text-white p-2 rounded-xl">Make Purchase</button>
+
             </div>
         </div>
 
-        <div class="cart w-1/5 bg-neutral-50 mt-4 h-80 p-2">
-            <ul>
-                <li>1. Home Cooker</li>
-                <li>2. Sports cates</li>
-                <li>3. Home Cooker</li>
-            </ul>
+    </div>
 
-            <hr>
-
-            <p class="font-bold">Total Price: <span>257.00</span>TK</p>
-            <p class="font-bold">Discount: <span>51.40</span>TK</p>
-            <p class="font-bold">Total: <span>205.60</span> Tk</p>
-            <hr>
-            <button class="bg-rose-600 text-white p-2 rounded-xl">Make Purchase</button>
-        </div>
-
-    </section>
-
-
+    <script src="index.js"></script>
 
 </body>
 
