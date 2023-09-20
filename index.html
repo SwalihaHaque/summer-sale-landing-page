@@ -226,8 +226,10 @@
                 <div>
                     <h4 class="font-bold">Have Coupon?</h4>
                     <div class="flex">
-                        <input type="text" placeholder="Coupon Code" class="input input-bordered max-w-fit" />
-                        <button class="bg-rose-600 text-white p-2 rounded-xl">Apply</button>
+                        <input id="coupon-field" type="text" placeholder="Coupon Code"
+                            class="input input-bordered max-w-fit" />
+                        <button disabled onclick="couponApply()" id="apply-btn"
+                            class="bg-rose-600 text-white p-2 rounded-xl disabled:bg-gray-500">Apply</button>
                     </div>
                 </div>
             </div>
@@ -243,13 +245,14 @@
                 <hr>
 
                 <div class="my-2">
-                    <p class="font-bold">Total Price: <span id="total">257.00</span>TK</p>
-                    <p class="font-bold">Discount: <span>51.40</span>TK</p>
-                    <p class="font-bold">Total: <span>205.60</span> Tk</p>
+                    <p class="font-bold">Total Price: <span id="total-price">00</span>Tk</p>
+                    <p class="font-bold">Discount: <span id="discount-price">51.40</span>TK</p>
+                    <p class="font-bold">Total: <span id="total">00</span> Tk</p>
                 </div>
 
                 <hr>
-                <button class="bg-rose-600 text-white p-2 rounded-xl">Make Purchase</button>
+                <button disabled id="make-purchase"
+                    class="bg-rose-600 text-white p-2 rounded-xl disabled:bg-gray-500">Make Purchase</button>
 
             </div>
         </div>
