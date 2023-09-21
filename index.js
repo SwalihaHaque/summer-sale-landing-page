@@ -3,6 +3,8 @@ function clickMe(target) {
     const container = document.querySelector("#selected-item");
     const itemName = target.parentNode.childNodes[3].innerText;
 
+    document.getElementById("added-new").innerHTML = "";
+
     const li = document.createElement("li");
     li.innerText = itemName;
 
@@ -27,6 +29,7 @@ function clickMe(target) {
 // coupon apply
 function couponApply() {
     let validPromoCode = "SELL200";
+    document.getElementById("promo-msg").innerHTML = "Congratulations! You have received 20% off your purchase";
 
     let couponFieldValue = document.getElementById("coupon-field").value;
     let totalValue = parseFloat(document.getElementById("total-price").innerText);
@@ -34,7 +37,7 @@ function couponApply() {
     let grandTotalField = document.getElementById("total");
 
     if (couponFieldValue === validPromoCode) {
-
+        console.log("successfully applied promo code");
         let discountValue = totalValue * 0.2;
         console.log(discountValue);
 
@@ -42,7 +45,15 @@ function couponApply() {
         grandTotalField.innerText = discountValue;
         let grandTotalValue = totalValue - discountValue;
         grandTotalField.innerText = grandTotalValue.toFixed(2);
+    } else {
+        document.getElementById("promo-msg").innerHTML = "Invalid Promo code!";
     }
+};
+
+function clearAll() {
+    // reset
+    const clearCart = document.querySelector("#clear-cart").innerText;
+    clearCart.reset()
 };
 
 
