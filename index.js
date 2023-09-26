@@ -3,7 +3,7 @@ function clickMe(target) {
     const container = document.querySelector("#selected-item");
     const itemName = target.parentNode.childNodes[3].innerText;
 
-    document.getElementById("added-new").innerHTML = "";
+    document.getElementById("no-items").innerHTML = "";
 
     const li = document.createElement("li");
     li.innerText = itemName;
@@ -50,14 +50,17 @@ function couponApply() {
     }
 };
 
+//reset
 function clearAll() {
-    // reset
-    const clearCart = document.querySelector("#clear-cart").innerText;
-    clearCart.reset()
+    document.getElementById("coupon-field").value = '';
+    document.getElementById("promo-msg").innerHTML = '';
+    document.getElementById('selected-item').innerText = '';
+    document.getElementById("no-items").innerHTML = "No Items Selected";
+
+    document.getElementById('total-price').innerText = '00.00';
+    document.getElementById('discount-price').innerText = '00.00';
+    document.getElementById('total').innerText = '00.00';
 };
-
-
-
 
 
 
